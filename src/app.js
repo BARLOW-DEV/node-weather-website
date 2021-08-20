@@ -47,7 +47,7 @@ app.get('/help', (req, res) => {
 
 
 app.get('/weather', (req, res) => {
-    if (!req.query.address) {
+    if (!req.query.address) {  //!req.query.address (if there is no address --> barlow-weather-app.com/weather? ' nothing ')
         return res.send({
             error: 'You must provide an address.'
         })
